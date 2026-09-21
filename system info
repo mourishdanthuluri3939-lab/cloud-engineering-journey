@@ -1,0 +1,27 @@
+
+### `day-01-system-info/system_info.py`
+
+```python
+import platform
+import os
+from datetime import datetime
+
+
+def show_system_info():
+    print("=" * 45)
+    print("       SYSTEM INFORMATION")
+    print("=" * 45)
+
+    print(f"OS          : {platform.system()}")
+    print(f"OS Version  : {platform.version()}")
+    print(f"Machine     : {platform.machine()}")
+    print(f"Hostname    : {platform.node()}")
+    print(f"Python      : {platform.python_version()}")
+    print(f"CPU Cores   : {os.cpu_count()}")
+    print(f"Date        : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
+    print("=" * 45)
+
+
+if __name__ == "__main__":
+    show_system_info()
